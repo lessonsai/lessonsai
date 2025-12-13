@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Конструктор урока будущего</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Меню навигации -->
+<nav class="navbar">
+  <div class="container navbar-container">
+
+    <div class="nav-brand">
+      LessonsAI
+    </div>
+
+    <!-- Кнопка-бургер для мобилок -->
+    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Ссылки меню -->
+    <div class="nav-links" id="navLinks">
+      <a href="#an"   class="nav-link">Ресурсы для учителя</a>
+      <a href="#ek"   class="nav-link">ОГЭ и ИИ</a>
+      <a href="#zolo" class="nav-link">Рабочие листы</a>
+      <a href="#ol"   class="nav-link">Геймификация</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO BLOCK -->
+<header class="hero-block fade-in">
+    <div class="hero-photo-wrapper">
+        <img class="hero-photo" src="images/hiroimg.png" alt="AI helper illustration">
+    </div>
+    <div class="hero-overlay-text">
+        <p class="hero-subtitle">«МКОУ «ООШ с. Кочковатки»</p>
+        <h1 class="hero-title2">Искусственный интеллект: просто о сложном</h2>
+            <div style="height: 10vh;"></div>
+        <h1 class="hero-title">«AI — помощник учителя»</h1>
+        <p class="hero-subtitle">Лаборатория возможностей</p>
+    </div>
+</header>
+
+<!-- TITLE -->
+
+<div class="title-block fade-in">
+    <h1>Возможности нейросетей</h1>
+    <p>Новые помощники для работы</p>
+</div>
+<!-- FEATURES -->
+
+<section id="features" class="section fade-in">
+    <div class="container">
+        
+        <div class="grid">
+
+            <div class="card fade-in">
+                <h3>Текст-генераторы</h3>
+                <p>Сценарии уроков, задачи, примеры и многое другое.</p>
+                <a href="https://giga.chat/" class="btn-primary">GigaChat</a>
+                <a href="https://alice.yandex.ru/" class="btn-primary">YandexAlice</a>
+                <a href="https://www.deepseek.com/" class="btn-primary">DeepSeek</a>
+            </div>
+
+            <div class="card fade-in">
+                <h3>Визуализация</h3>
+                <p>Создание иллюстраций и инфографики к уроку.</p>
+                <a href="https://giga.chat/" class="btn-primary">Kandinsky — GigaChat</a>
+                <a href="https://gamma.app/nl" class="btn-primary">Gamma.app</a>
+                <a href="https://supa.ru/" class="btn-primary">Supa</a>
+                <a href="https://shedevrum.ai/ru" class="btn-primary">Shedevrum</a>
+                <a href="t.me/GPT4Telegrambot" class="btn-primary">GPT-bot</a>
+            </div>
+
+            <div class="card fade-in">
+                <h3>Редактура</h3>
+                <p>Адаптация материалов под класс.</p>
+                <div class="btn-primary">
+                    <p class="btn-title">Фактчекинг</p>
+                    <p>Проверяйте данные, которые генерирует нейросеть</p>
+                </div>
+                <div class="btn-primary">
+                    <p class="btn-title">Педагогическая целесообразность</p>
+                    <p>Убедитесь, что материал соответствует целям</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- х -->
+<section style="background-color: #fff;">
+    <section  class="workflow-section fade-in" id="an">
+        <div class="container workflow-grid reverse-grid">
+
+            <div class="workflow-text fade-in">
+                <div class="title-block2 fade-in">
+                    <h1>Конструктор урока будущего</h1>
+                    <p style="font-size: 24px;">Нейросеть — помощник, а не автор</p>
+                </div>
+
+                <div style="margin-top: 15%;">
+                    <h2>Создание сценариев с помощью нейросетей</h2>
+                </div>
+
+                <a href="https://edu-assist.me/" class="btn-primary">Ассистент преподавателя</a>
+                <a href="https://teacher-soft.ru/" class="btn-primary">Teacher-Soft</a>
+                <a href="https://giga.chat/" class="btn-primary">GigaChat</a>
+                <a href="https://alice.yandex.ru/" class="btn-primary">YandexAlice</a>
+            </div>
+
+            <!-- КАРТИНКА С ТЕКСТОМ ПОВЕРХУ -->
+            <div class="workflow-image fade-in image-with-text">
+                <img src="images/anar.png" alt="Игмамбетова А.Г.">
+
+                <div class="image-text-overlay">
+                    <h3>Игмамбетова А.Г.</h3>
+                    <p>Зам.директора по УВР</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROMPT CARDS -->
+    <section id="prompt-cards" class="section alt fade-in">
+        <div class="container">
+            <h2>Готовые промпты</h2>
+            <p>Используйте готовые шаблоны для быстрого создания структуры уроков.</p>
+
+            <div class="prompt-grid">
+
+                <div class="prompt-card fade-in">
+                    <h3>План урока (универсальный)</h3>
+                    <p>Создаёт структурированный конспект урока.</p>
+                    <a class="show-prompt">Посмотреть промпт</a>
+                    <pre class="prompt-text">
+    Направление: создание каркаса урока
+    Ты — опытный преподаватель-методист с 15-летним стажем. Разработай структурный план урока по теме «[конкретная тема]» для [класс] класса продолжительностью [количество] минут.
+    Контекст:
+    Уровень подготовки учащихся: [базовый/средний/продвинутый]
+    Цель урока: [сформулируйте цель]
+    Планируемые результаты: [перечислите 2-3 конкретных навыка]
+    Задача:
+    Создай подробный план-конспект с временными рамками, включающий:
+    Организационный момент (1-2 мин)
+    Проверка домашнего задания/актуализация знаний (5-7 мин)
+    Объяснение новой темы (15-20 мин)
+    Практическая работа (10-15 мин)
+    Закрепление материала (5-7 мин)
+    Рефлексия и домашнее задание (3-5 мин)
+    Формат: таблица с колонками «Время», «Этап урока»,
+    «Деятельность учителя»,«Деятельность учащихся»,
+    «Формируемые УУД».
+
+                    </pre>
+                    <button class="copy-btn">Копировать</button>
+                </div>
+
+            <div class="prompt-card fade-in">
+        <h3>Создание практических заданий</h3>
+        <p>Генерирует упражнения и критерии.</p>
+        <a class="show-prompt">Посмотреть промпт</a>
+        <pre class="prompt-text">
+    Направление: разработка задач и упражнений
+    Ты — эксперт по методике преподавания информатики.
+    Создай набор практических заданий по теме «[тема]» для [класс] класса.
+    Контекст:
+    Тип заданий: [индивидуальные/парные/групповые]
+    Уровень сложности: [базовый/повышенный]
+    Необходимое оборудование: [компьютеры/тетради/онлайн-доска]
+    Задача:
+    Разработай 3 варианта заданий разного уровня:
+    Базовый уровень (для всех учащихся)
+    Средний уровень (для большинства)
+    Продвинутый уровень (для мотивированных)
+    Формат: для каждого задания укажи:
+    Формулировку задачи
+    Пример ожидаемого результата
+    Критерии оценки
+    Время на выполнение
+        </pre>
+        <button class="copy-btn">Копировать</button>
+    </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+<section style="background-color: #fff;">
+<!-- WORKFLOW BLOCK 1 -->
+    <section  class="workflow-section fade-in" id="ek">
+        <div class="container workflow-grid">
+            <div class="workflow-text fade-in">
+                <h2>Промпт и промпт-инжиниринг: искусство задавать вопросы</h2>
+                
+                    <p style="">“Промпт” — это текстовая инструкция, то есть <i>задание для искусственного интеллекта.</i></p>
+                    <p style="margin-bottom: 10%;">“Промпт-инжиниринг” — искусство формулировать так, чтобы ИИ понял именно то, что нужно.</p>
+                    <p></p>
+                    <p >Хороший промпт — как хорошее задание ученику: понятно, конкретно, с контекстом и примером.</p>
+                    <p style="margin-bottom: 10%;">“Ты — …; Твоя цель — …; Формат — …; Стиль — …”</p>
+                    <p></p>
+                    <p><i> Промпт-инжиниринг — это новая педагогическая грамотность.</i></p>
+            </div>
+            <div class="workflow-image fade-in image-with-text">
+                <img src="images/ekt.png" alt="Львова Е.В.">
+
+                <div class="image-text-overlay">
+                    <h3>Львова Е.В.</h3>
+                    <p>Учитель русского языка и литературы</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section  class="section alt fade-in" id="two-images">
+        <div class="container two-images-grid">
+
+            <!-- ЛЕВОЕ ИЗОБРАЖЕНИЕ -->
+            <div class="two-img-card fade-in">
+                <img src="images/miron.png" alt="Левое изображение">
+
+                <a class="btn-primary" href="https://uchitel.club/miron">Мирон</a>
+                <p style="padding: 2%;"></p>
+                <a class="btn-primary" href="https://t.me/elmanaibot?start=uc">Мирон в телеграм</a>
+            </div>
+
+            <!-- ПРАВОЕ ИЗОБРАЖЕНИЕ -->
+            <div class="two-img-card fade-in">
+                <img src="images/soch.png" alt="Правое изображение">
+
+                <a class="btn-primary" href="https://uchitel.club/essayguru">Сочинитель</a>
+                <p style="padding: 2%;"></p>
+                <a class="btn-primary" href="https://t.me/essayguruaibot?start=uc">Сочинитель в телеграм</a>
+            </div>
+
+        </div>
+    </section>
+</section>
+
+
+
+<section style="background-color: #fff;">
+    <section  class="workflow-section fade-in" id="zolo">
+        <div class="container workflow-grid reverse-grid">
+
+            <div class="workflow-text fade-in">
+                <div class="title-block2 fade-in">
+                    <h1>Создание рабочего листа с помощью ии</h1>
+                    <p style="font-size: 24px;"></p>
+                </div>
+
+                <div style="margin-top: 15%;">
+                    <h2></h2>
+                </div>
+
+                <p style="margin-bottom: 10%;">“Искусственный интеллект — это не мода, а новая грамотность XXI века.</p>
+                    <p></p>
+                    <p style="margin-bottom: 10%;">Искусственный интеллект — не конкурент, а коллега</p>
+                <a href="https://supa.ru/app/designs/21176364/edit" class="btn-primary">Supa</a>
+                <a href="https://chat.deepseek.com/" class="btn-primary">DeepSeek</a>
+                <a href="https://obuchai.com/" class="btn-primary">Обучай</a>
+               
+            </div>
+            <!-- КАРТИНКА С ТЕКСТОМ ПОВЕРХУ -->
+            <div class="workflow-image fade-in image-with-text">
+                <img src="images/zolot.png" alt="Игмамбетова А.Г.">
+
+                <div class="image-text-overlay">
+                    <h3>Золотухина Е.Н.</h3>
+                    <p>Учитель математики и информатики</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- РАБОЧИЙ ЛИСТ С ПОМОЩЬЮ ИИ -->
+    <section class="workflow-section fade-in" id="worksheet-ai">
+        <div class="container">
+            <div class="workflow-text fade-in">
+                <h2>Создание рабочего листа с помощью ИИ</h2>
+                <p>
+                    Этот алгоритм показывает, как шаг за шагом использовать нейросеть для создания рабочего листа: 
+                    от генерации заданий до готового HTML-документа для печати.
+                </p>
+
+                <ol class="steps-list">
+                    <li>
+                        <strong>ШАГ 1. Генерация заданий ИИ</strong><br>
+                        Сначала просим нейросеть придумать сами задания для рабочего листа.
+                        <br><br>
+                        Пример промпта:
+                        <blockquote>
+    Ты — учитель [укажите ваш предмет]/методист школы. 
+    Подготовь набор заданий для рабочего листа по теме: [укажи тему].
+    Цель: [что должны уmetь учащиеся после выполнения]. 
+    Класс/уровень: [класс/возраст].
+
+    Структура:
+    • Разминка (3 коротких вопроса)  
+    • Основной блок (5 заданий разного типа)  
+    • Творческое задание (1)  
+    • Самопроверка / ключ (краткие ответы).
+
+    Требования:
+    – разнообразие форматов (множественный выбор, короткий ответ, сопоставление, мини-кейс);  
+    – ясный язык, без лишней терминологии;  
+    – ограничься объёмом на 1 печатный лист A4;  
+    – сделай ключ ответов в конце отдельным блоком на дополнительном листе.
+                        </blockquote>
+                    </li>
+
+                    <li>
+                        <strong>ШАГ 2. Корректировка заданий (по ситуации)</strong><br>
+                        Если результат получился слишком объёмным или сложным, уточняем промпт.
+                        <br><br>
+                        Возможные уточнения:
+                        <ul>
+                            <li>измени названия частей структуры, сделай их образными и понятными детям;</li>
+                            <li>сократи задания до 15 минут работы в классе;</li>
+                            <li>ограничься объёмом на 1 печатный лист A4;</li>
+                            <li>добавь варианты ответов к заданиям 2 и 3;</li>
+                            <li>сделай ключ ответов в конце отдельным блоком.</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>ШАГ 3. Оформление в рабочий лист и генерация HTML</strong><br>
+                        Когда структура и задания устраивают, просим нейросеть оформить всё 
+                        как HTML-страницу, готовую к печати.
+                        <br><br>
+                        Пример формулировки:
+                        <blockquote>
+    Представь этот рабочий лист в виде кода готовой для печати HTML-страницы, 
+    содержащей рабочий лист с нарастающей сложностью заданий и заданиями на рассуждение. 
+    Рабочий лист должен быть в красивом дизайне и с приятным внешним видом.
+                        </blockquote>
+                    </li>
+
+                    <li>
+                        <strong>ШАГ 4. Преобразование кода в файл и финальная правка</strong><br>
+                        1) Скопируйте HTML-код целиком из ответа нейросети.<br>
+                        2) Вставьте его сюда: <a href="https://editorhtmlonline.com/ru/" target="_blank">editorhtmlonline.com/ru</a>.<br>
+                        3) При необходимости отредактируйте внешний вид и шрифты.<br>
+                        4) Сохраните в PDF или отправьте на печать.
+                        <br><br>
+                        Если лист не помещается на одной странице A4, можно дать нейросети уточнение:
+                        <blockquote>
+    Нет, рабочий лист превышает объём одного печатного листа A4. 
+    Оптимизируй его для печати: уменьши отступы между разделами и по краям листа, 
+    уменьши шрифт так, чтобы весь рабочий лист поместился на 1 странице A4. 
+    Красивый дизайн и приятный внешний вид сохрани.
+                        </blockquote>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="worksheet-prompts" class="section alt fade-in">
+        <div class="container">
+            <h2>Готовые промпты для рабочего листа</h2>
+
+            <div class="prompt-grid">
+
+                <!-- ПРОМПТ 1 -->
+                <div class="prompt-card fade-in">
+                    <h3>Промпт 1: задания для рабочего листа</h3>
+                    <p>Генерирует структуру и задания по теме «Квадратные уравнения».</p>
+                    <a class="show-prompt">Показать промпт</a>
+
+                    <pre class="prompt-text">
+Ты — опытный учитель  математики.  Подготовь набор заданий для рабочего листа по математике на тему: «Квадратные уравнения».
+Цель: Умение находить корни с помощью формулы дискриминанта
+Класс/уровень: 8 класс.
+Структура:
+2 задания на нахождение корней с помощью формулы дискриминанта;
+2 текстовые задачи, оформленные в бытовом контексте;
+1 практическую задачу, связанную с площадью фигуры (например , задача про участок земли)
+Требования:  После каждого задания добавь несколько строк  для записи решения. 
+Ясный язык, без лишней терминологии: используй простые слова, яркие примеры.  Оrpaничься объёмом на 1 печатный лист A4. Сделай ключ ответов в конце отдельным  блоком на дополнительном  листе.
+
+                    </pre>
+
+                    <button class="copy-btn">Копировать</button>
+                </div>
+
+                <!-- ПРОМПТ 2 -->
+                <div class="prompt-card fade-in">
+                    <h3>Промпт 2: генерация HTML рабочего листа</h3>
+                    <p>Создаёт красивый печатный HTML-файл.</p>
+                    <a class="show-prompt">Показать промпт</a>
+
+                    <pre class="prompt-text">
+    Представь рабочий лист как HTML-страницу, готовую для печати.  
+    Учти: объём должен поместиться на одну страницу A4.  
+
+    Требования к коду:
+    • красивый дизайн, структурированная разметка;  
+    • фоновый элемент по теме;  
+    • ответы — на отдельной странице, не скрытые при печати.
+
+    Оптимизация:
+    Если лист не помещается — уменьши отступы, интервалы и шрифт,
+    но сохрани дизайн и читаемость.
+                    </pre>
+
+                    <button class="copy-btn">Копировать</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="ol">
+  <div class="container workflow-grid">
+    
+    <!-- Фото слева -->
+    <div class="workflow-image fade-in image-with-text">
+      <img src="images/olga-factcheck.png" alt="Учитель истории в классе">
+      <div class="image-text-overlay">
+                    <h3>Коноплева О.С.</h3>
+                    <p>Учитель истории и обществознания</p>
+        </div>
+    </div>
+
+    <!-- Текст справа -->
+    <div class="workflow-text fade-in">
+      <h2>ИИ на уроках: вовлекаем и проверяем</h2>
+      <p><strong>Фактчекинг</strong> — умение отличать вымысел от исторической правды.</p>
+
+      <p style="margin-top: 16px;">
+        Универсальная формула для создания учебных пособий, игр, наглядности:
+      </p>
+      <ul>
+        <li>генерация содержания задания;</li>
+        <li>генерация изображения;</li>
+        <li>монтаж видео в любом редакторе.</li>
+      </ul>
+
+      <div style="margin-top: 18px;">
+        <a href="https://giga.chat/" class="btn-primary" target="_blank">Сгенерировать задание в GigaChat</a>
+        <a href="https://alice.yandex.ru/" class="btn-primary" target="_blank">Сгенерировать задание в Яндекс.Алисе</a>
+        <a href="https://t.me/GPT4Telegrambot" class="btn-primary" target="_blank">@GPT4Telegrambot для картинок и идей</a>
+      </div>
+
+      <p style="margin-top: 24px; font-style: italic;">
+        Искусственный интеллект не заменит учителя.<br>
+        Но учитель, умеющий пользоваться ИИ, заменит многих.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="history-game">
+  <div class="container workflow-grid reverse-grid">
+
+    <!-- ТЕКСТ СЛЕВА -->
+    <div class="workflow-text fade-in">
+      <h2>Настольная игра «Древняя Русь»</h2>
+      <p>
+        ИИ помогает создавать учебные материалы: от структуры заданий до ярких игровых полей. 
+        Ниже — промпты, которые можно использовать для адаптации игры под свой класс или тему.
+      </p>
+
+      <div class="prompt-grid" style="margin-top: 24px;">
+
+        <!-- ПРОМПТ 1 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: содержание игры</h3>
+          <p>Описание структуры и вопросов для настольной игры.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: ты учитель истории, методист. 
+Составь простую настольную игру-бродилку «Древняя Русь» для 6 класса. 
+Игровое поле — 20 карточек с вопросами по теме. 
+Каждая карточка содержит короткий вопрос и 2–3 варианта ответа.
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <!-- ПРОМПТ 2 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: игровое поле</h3>
+          <p>Описание визуального поля игры.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт для генерации изображения:
+«Игровое поле настольной игры “Древняя Русь” для 6 класса. 
+Стиль — яркая учебная инфографика, умеренная мультяшность. 
+25 клеток в виде дорожки-змейки. Фон — тёплая палитра: охра, зелёный, терракотовый. 
+Лёгкая карта Древней Руси IX–XI вв. Стиль чистый и структурированный, без надписей. 
+Соотношение сторон 16:9».
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <!-- ПРОМПТ 3 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: карточки с вопросами</h3>
+          <p>Описание набора карточек для игры.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+«Карточки настольной игры “Древняя Русь” для школьников. 
+Стиль — учебная инфографика, лёгкая мультяшность. 
+Фон — древесно-терракотовые оттенки и орнамент по краям. 
+Иконки: князь Олег, путь “из варяг в греки”, крещение Руси, Русская Правда. 
+Современные ровные линии, чёткие силуэты».
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ИЗОБРАЖЕНИЯ СПРАВА -->
+    <div class="workflow-image fade-in">
+      <div class="game-gallery">
+
+        <div class="game-row1">
+          <img src="images/rus3.png" alt="Древняя Русь — карточки игры">
+          <img src="images/rus2.png" alt="Карточка с вопросом">
+        </div>
+
+        <div class="game-row">
+          <img src="images/rus1.png" alt="Игровое поле — Древняя Русь">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="coloring">
+  <div class="container workflow-grid">
+
+    <!-- КАРТИНКИ СПРАВА -->
+    <div class="workflow-image fade-in">
+      <div class="coloring-gallery">
+
+        <div class="coloring-row">
+            <img src="images/col1.png" alt="Раскраска Тесей и Минотавр">
+            <img style="display: none;" src=" " alt="Раскраска Подвиги Геракла">
+          
+        </div>
+        <div class="coloring-row">
+          <img src="images/col3.png" alt="Раскраска Одиссей и циклоп">
+        </div>
+        <div class="coloring-row">
+          <img src="images/col2.png" alt="Раскраска Одиссей и циклоп">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ТЕКСТ СЛЕВА -->
+    <div class="workflow-text fade-in">
+      <h2>Обучающие раскраски</h2>
+      <p>
+        Раскраски превращаются в инструмент обучения: каждый рисунок содержит задание, 
+        требующее знания сюжета и развития логики. Идеально для 5 класса.
+      </p>
+
+      <div class="prompt-grid" style="margin-top: 24px;">
+
+        <!-- ПРОМПТ 1 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: серия раскрасок</h3>
+          <p>Общий промпт для создания комплекта иллюстраций.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: ты профессиональный художник и учитель истории. 
+Создай промпт для серии раскрасок по теме «Мифы древней Греции» для 5 класса. 
+Раскраски должны быть обучающими, объёмными, с заданиями для проверки знаний 
+внизу каждой страницы.
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <!-- ПРОМПТ 2 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: «Тесей и Минотавр»</h3>
+          <p>Подробное описание одной раскраски.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: создай контурную раскраску по мифу «Тесей и Минотавр». 
+Тесей с мечом и щитом, Минотавр — крупным силуэтом, без агрессивных поз. 
+Фон — стилизованный вход в Лабиринт.  
+Чёткие линии, удобные для раскрашивания. 
+Снизу добавь задание: «Кто помог Тесею выбраться из лабиринта?».
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <!-- ПРОМПТ 3 -->
+        <div class="prompt-card fade-in">
+          <h3>Промпт: «Подвиги Геракла»</h3>
+          <p>Раскраска с крупной героической сценой.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: создай контурную обучающую раскраску по теме «Подвиги Геракла». 
+Изобрази Геракла в львиной шкуре и с дубиной. 
+Рядом — символ одного из подвигов: Немейский лев ИЛИ Авгиевы конюшни. 
+Добавь декоративную рамку из греческого меандра. 
+Снизу размести прямоугольник: «Подпиши: какой это подвиг Геракла?».
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="comics">
+  <div class="container workflow-grid reverse-grid">
+
+    <!-- Текст слева -->
+    <div class="workflow-text fade-in">
+      <h2>Обучающие комиксы</h2>
+      <p>
+        Комиксы с пропущенными датами и терминами — отличный формат для проверки знаний.
+      </p>
+
+      <div class="prompt-grid" style="margin-top: 24px;">
+
+        <div class="prompt-card fade-in">
+          <h3>Промпт: серия комиксов</h3>
+          <p>Общий промпт по теме «Реформы Петра I».</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: ты креативный учитель истории. Создай серию исторических обучающих комиксов 
+по теме «Реформы Петра I», направленных на проверку знаний. 
+Диалоги — это задания с пропущенными датами и терминами, которые ученики должны вставить.
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <div class="prompt-card fade-in">
+          <h3>Промпт: один комикс-сцена</h3>
+          <p>Подробное описание одного сюжета.</p>
+          <a class="show-prompt">Показать промпт</a>
+          <pre class="prompt-text">
+Промпт: обучающий исторический комикс для 7 класса в стиле яркой учебной инфографики. 
+Сцена: молодой Пётр I наблюдает за строительством корабля в Воронеже. 
+Рабочие, мастера, ландшафт XVII века. В диалогах — задания с пропущенными словами.
+
+Пример диалога:  
+Пётр I: «В ___ году я начал строительство флота на реке ___, чтобы укрепить военную мощь России».  
+Мастер: «Да, государь, это начало твоей большой ___ реформы».  
+
+Ученики заполняют пропуски. Оставь аккуратные пустые поля для ответов.
+          </pre>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Картинка комикса справа -->
+    <div class="workflow-image fade-in" >
+      <img src="images/co.png" alt="Обучающий комикс о реформах Петра I">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="creative-visuals">
+  <div class="container workflow-grid visual-grid">
+
+    <!-- КОЛОНКА 1 — Вязаный город -->
+    <div class="visual-column fade-in">
+
+      <img src="images/kn.png" alt="Вязаный зимний город" class="visual-image">
+
+      <div class="prompt-card">
+        <h3>Вязаный город</h3>
+        <p>Промпт для создания зимней вязаной сцены + алгоритм преобразования в видео.</p>
+
+        <a class="show-prompt">Показать промпт</a>
+        <pre class="prompt-text">
+Промпт: детальная зимняя вязаная сцена, где всё — здания, земля, небо, деревья — 
+создано вручную из пряжи, шерсти и фетра. Все поверхности из толстой вязки 
+с видимыми петлями. Земля покрыта пушистым шерстяным снегом. 
+Яркое небо из синей пряжи с большими мультяшными облаками из белой шерсти. 
+Мягкий снег из волокон падает в воздухе. Освещение уютное, стилизованное, 
+в эстетике Pixar. Общий вид: милый, уютный, сказочный, полностью ручной работы. 
+Стиль: вязаный мир, шерстяной реализм, ручная миниатюра, мультяшные облака, 
+макродетали пряжи, эстетика стоп-моушн Pixar. Соотношение сторон 9:16.
+        </pre>
+
+        <button class="copy-btn">Копировать</button>
+
+        <!-- ШАГИ -->
+        <div class="steps-box">
+          <h4>Как сделать анимированный ролик</h4>
+          <ol class="steps-list custom-steps">
+            <li><strong>ШАГ 1:</strong> генерация картинки + ваше фото через @GPT4Telegrambot</li>
+            <li><strong>ШАГ 2:</strong> оживление картинки в @gigachat_bot или в приложении «Алиса AI»  
+              Промпт: <em>«оживи фото — снег идет / машины едут / люди идут»</em>
+            </li>
+            <li><strong>ШАГ 3:</strong> монтаж видео в приложении (например, CapCut)</li>
+          </ol>
+        </div>
+
+        <!-- КНОПКИ СЕРВИСОВ -->
+        <div class="visual-buttons">
+          <a href="https://giga.chat/" target="_blank" class="btn-primary">GigaChat</a>
+          <a href="https://giga.chat/" target="_blank" class="btn-primary">Kandinsky</a>
+          <a href="https://t.me/GPT4Telegrambot" target="_blank" class="btn-primary">@GPT4Telegrambot</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- КОЛОНКА 2 — Ёлочная игрушка -->
+    <div class="visual-column fade-in">
+
+      <img  src="images/chr.png" alt="Персональная елочная игрушка по фото" class="visual-image">
+
+      <div class="prompt-card">
+        <h3>Персональная ёлочная игрушка</h3>
+        <p>Промпт для создания фигурки-игрушки по фото + шаги по созданию ролика.</p>
+
+        <a class="show-prompt">Показать промпт</a>
+        <pre class="prompt-text">
+Промпт: создай высокодетализированное ёлочное украшение в виде стилизованной 
+миниатюрной фигурки человека с фото. Фигура должна быть похожа на оригинал. 
+Украшение выглядит глянцевым, лакированным, как коллекционные украшения премиум-класса. 
+Сохрани черты лица, причёску, пропорции головы и общий узнаваемый облик. 
+Фигурка стоит прямо, руки аккуратно сложены перед телом, в руках маленький подарок. 
+Пропорции стилизованные: удлинённые ноги, компактный торс, слегка увеличенная голова. 
+Фигурка висит на новогодней ёлке, вокруг — тёплые гирлянды, мягкое праздничное освещение.
+        </pre>
+
+        <button class="copy-btn">Копировать</button>
+
+        <!-- ШАГИ -->
+        <div class="steps-box">
+          <h4>Как сделать анимированную игрушку</h4>
+          <ol class="steps-list custom-steps">
+            <li><strong>ШАГ 1:</strong> генерация фигурки по фото в @GPT4Telegrambot</li>
+            <li><strong>ШАГ 2:</strong> оживление в @gigachat_bot или «Алиса AI»  
+              Промпт: <em>«оживи фото — снег идет / гирлянды мигают / человек наклоняется»</em>
+            </li>
+            <li><strong>ШАГ 3:</strong> монтаж видео в CapCut или аналогах</li>
+          </ol>
+        </div>
+
+        <!-- КНОПКИ СЕРВИСОВ -->
+        <div class="visual-buttons">
+          <a href="https://t.me/GPT4Telegrambot" target="_blank" class="btn-primary">@GPT4Telegrambot</a>
+          <a href="https://giga.chat/" target="_blank" class="btn-primary">GigaChat</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="workflow-section fade-in" id="presentations-ai">
+  <div class="container workflow-grid">
+
+    <!-- Алгоритм слева -->
+    <div class="workflow-text fade-in">
+      <h2>Алгоритм создания материалов к уроку</h2>
+      <ol class="steps-list">
+        <li>Составляем текстовый промпт нейросети для генерации подробного сценария урока.</li>
+        <li>Редактируем полученный текст самостоятельно или через нейросеть.</li>
+        <li>
+          Задаём промпт для презентации:  
+          «По данному тексту напиши техническое задание для создания презентации. 
+          Количество слайдов ___, соотношение слов и картинок на одном слайде 50/50. 
+          Подробно к каждому слайду опиши промпт для генерации картинок. 
+          Стиль презентации ___, цветовая гамма ___».
+        </li>
+        <li>Загружаем итоговый текст в нейросеть для генерации презентации.</li>
+        <li>Редактируем, скачиваем, используем на уроке.</li>
+      </ol>
+    </div>
+
+    <!-- Карточка Gamma справа -->
+    <div class="workflow-text fade-in">
+      <h2>Нейросеть для презентаций</h2>
+
+      <div class="prompt-card">
+        <h3>Gamma.app</h3>
+        <p>Онлайн-сервис для создания презентаций с помощью ИИ.</p>
+        <ul>
+          <li>При регистрации выдаётся стартовый запас баллов.</li>
+          <li>Можно быстро собрать презентацию до 10 слайдов.</li>
+          <li>Выбор тем оформления, стиля картинок, шаблонов слайдов и шрифтов.</li>
+          <li>Несколько форматов для скачивания, в том числе PowerPoint.</li>
+          <li>После скачивания презентацию можно редактировать без привязки к нейросети.</li>
+          <li>Водяной знак убирается через «Вид → Образец слайдов» в PowerPoint.</li>
+        </ul>
+        <a href="https://gamma.app/" class="btn-primary" target="_blank">Открыть Gamma.app</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

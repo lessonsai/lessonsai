@@ -1,0 +1,1103 @@
+/* ---------------------- */
+/*          RESET         */
+/* ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f6f7fb;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+/* ---------------------- */
+/*     NAVBAR STYLES      */
+/* ---------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Логотип / название */
+.nav-brand {
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+/* Обёртка ссылок */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Кнопки-ссылки как раньше */
+.nav-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #4a6cf7, #6a9bff);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #3a53d1, #5a83ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Кнопка-бургер (по умолчанию скрыта на десктопе) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #333;
+    border-radius: 999px;
+    transition: 0.25s;
+}
+
+.nav-toggle span + span {
+    margin-top: 4px;
+}
+
+/* Анимация бургера при открытом меню */
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* Стилизация ссылок как кнопки */
+.nav-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #4a6cf7, #6a9bff);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #3a53d1, #5a83ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Подсветка активной ссылки */
+.nav-link.active {
+    background: linear-gradient(135deg, #ff7a4a, #ffb04a);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Плавный скролл */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Адаптивное меню */
+@media (max-width: 900px) {
+    .hero-block { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .hero-overlay-text { 
+        margin: 20px 0 0; 
+        text-align: center; 
+    }
+    .hero-title { font-size: 32px; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 18px; }
+
+    /* 🔹 показываем бургер */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* 🔹 скрытое выпадающее меню */
+    .nav-links {
+        position: fixed;
+        top: 60px;       /* высота шапки */
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 20px 16px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        display: none;         /* <-- по умолчанию скрыто */
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        display: flex;         /* <-- показываем, когда .open */
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* HERO BLOCK */
+.hero-block { display: flex; align-items: center; justify-content: space-between; padding: 40px 5%; flex-wrap: wrap; }
+.hero-photo-wrapper { flex: 1.5; }
+.hero-photo { width: 100%; object-fit: contain; border-radius: 12px; }
+.hero-overlay-text { flex: 1; text-align: right; margin-left: 20px; }
+.hero-title { font-size: 42px; font-weight: 700; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+.hero-title2 { font-size: 36px; font-weight: 700; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+
+.hero-subtitle { font-size: 26px; color: #555; }
+
+/*        TITLE BLOCK     */
+/* ---------------------- */
+.title-block {
+    padding-top: 18vh;
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.title-block h1 {
+    font-size: 46px;
+}
+
+.title-block p {
+    margin-top: 5%;
+    font-size: 26px;
+}
+.title-block2 {
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+
+.title-block2 h1 {
+    font-size: 36px;
+}
+
+.title-block2 p {
+    margin-top: 20px;
+    font-size: 28px;
+    text-align: right;
+}
+
+/* ---------------------- */
+/*       BUTTONS          */
+/* ---------------------- */
+.btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    margin-top: 18px;
+    background: linear-gradient(135deg, #4a6cf7, #6a9bff);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ---------------------- */
+/*         SECTIONS       */
+/* ---------------------- */
+.section {
+    padding: 60px 0;
+}
+
+.section.alt {
+    background: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card h4, .card p {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* ---------------------- */
+/*    PROMPT CARDS        */
+/* ---------------------- */
+.prompt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.prompt-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: 0.25s ease;
+}
+
+.prompt-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.prompt-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.prompt-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.copy-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4a6cf7, #6a9bff);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.copy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.show-prompt {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #4a6cf7;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.prompt-text {
+    display: none;
+    max-height: 400px;
+    overflow: auto;
+    padding: 12px;
+    background: #f4f5f8;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.show-prompt:hover {
+    color: #2b3fc4;
+}
+/* Контейнер для изображения с текстом */
+.image-with-text {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Текст поверх изображения */
+.image-text-overlay {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 10px 18px;
+    background: rgba(0, 0, 0, 0.45); /* полупрозрачный фон */
+    border-radius: 10px;
+    max-width: 100%;
+    width: 80%;
+}
+
+.image-text-overlay h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.image-text-overlay p {
+    font-size: 18px;
+}
+
+/* адаптация на телефонах */
+@media (max-width: 600px) {
+    .image-text-overlay {
+        bottom: 10px;
+        padding: 6px 12px;
+    }
+    .image-text-overlay h3 {
+        font-size: 18px;
+    }
+    .image-text-overlay p {
+        font-size: 14px;
+    }
+}
+
+/* ---------------------- */
+/*   WORKFLOW & PRESENTATION SECTIONS     */
+/* ---------------------- */
+.workflow-section, .presentation-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 40px auto;
+}
+
+.workflow-section h2, .presentation-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* GRID LAYOUT */
+.workflow-grid, .presentation-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.workflow-text, .presentation-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.workflow-image, .presentation-image {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.workflow-image img, .presentation-image img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* CONTENT STYLING */
+.workflow-content ol, .presentation-text ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+}
+
+.workflow-content ol li, .presentation-text ol li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.workflow-content ol li::before, .presentation-text ol li::before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #4a6cf7;
+}
+
+.workflow-content blockquote, .presentation-text blockquote {
+    margin: 12px 0 0 0;
+    padding: 12px 16px;
+    background: #f4f5f8;
+    border-left: 4px solid #4a6cf7;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* REVERSE GRID */
+.reverse-grid {
+    flex-direction: row-reverse;
+}
+
+/* SQUARE IMAGE */
+.square-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* STEPS LIST */
+.steps-list {
+    counter-reset: step;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.steps-list li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.steps-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4a6cf7;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* WORKFLOW TEXT */
+.workflow-text h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+.workflow-text h3 { font-size: 22px; font-weight: 600; margin-top: 20px; margin-bottom: 12px; }
+.workflow-text p, .workflow-text li, .workflow-text blockquote { font-size: 20px; line-height: 1.6; color: #333; }
+.workflow-text blockquote { background: #f4f5f8; border-left: 4px solid #4a6cf7; padding: 12px 16px; border-radius: 8px; margin-top: 10px; }
+
+
+
+
+/* Сетка для блока из двух изображений */
+.two-images-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+/* Карточка с изображением */
+.two-img-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.two-img-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+/* Изображение внутри карточки */
+.two-img-card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Кнопка под изображением */
+.two-img-card .btn-primary {
+    width: 80%;
+    margin-top: auto;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .two-images-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .two-img-card {
+        width: 100%;
+    }
+    .two-img-card .btn-primary {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- */
+/* REVEAL-UP ANIMATION    */
+/* ---------------------- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+    filter: blur(8px);
+}
+
+/* Когда IntersectionObserver добавляет .visible */
+.fade-in.visible {
+    animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Ключевые кадры: мягкий подъём + убираем блюр */
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px) scale(0.98);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* CARD HOVER ANIMATION */
+.card, .prompt-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover, .prompt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+/* BUTTON ANIMATION */
+.btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+}
+
+
+/* ---------------------- */
+/*      ADAPTIVE CSS      */
+/* ---------------------- */
+@media (max-width: 900px) {
+    .hero-block { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .hero-overlay-text { 
+        margin: 20px 0 0; 
+        text-align: center; 
+    }
+    .hero-title { font-size: 32px; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 18px; }
+
+    .workflow-grid, .presentation-grid { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .workflow-image, .presentation-image { width: 100%; }
+    .workflow-image img, .presentation-image img { max-height: none; }
+    .square-image img { 
+        width: 80%; 
+        max-width: 400px; 
+        height: auto; 
+        margin: 0 auto; 
+    }
+
+    /* 🔹 мобильное меню */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;          /* высота шапки */
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 20px 16px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-links.open {
+        max-height: 260px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .title-block { padding-top: 12vh; }
+    .title-block h1 { font-size: 32px; }
+    .title-block p { font-size: 20px; }
+    .btn-primary { font-size: 16px; padding: 10px 16px; }
+    .card { padding: 16px; }
+    .prompt-card { padding: 20px; }
+    .prompt-card h3 { font-size: 20px; }
+    .copy-btn { font-size: 15px; padding: 11px 18px; }
+
+    .workflow-section, .presentation-section { padding: 40px 15px; }
+    .workflow-section h2, .presentation-text h2 { font-size: 24px; }
+    .workflow-content ol li, .presentation-text ol li { padding-left: 30px; font-size: 15px; }
+    .workflow-content blockquote, .presentation-text blockquote { font-size: 14px; padding: 10px 12px; }
+}
+/* Галерея для блока игры */
+.game-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.game-row1 {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.game-row1 img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    object-fit: cover;
+}
+.game-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.game-row img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    object-fit: cover;
+}
+
+/* Мобильная версия */
+@media (max-width: 900px) {
+    .game-row {
+      flex-direction: column;
+      
+  }
+    .game-row1 img{
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+    .game-row1 img{
+    width: 50%;
+  }
+}
+
+/* Галерея раскрасок — как в блоке игры */
+.coloring-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.coloring-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.coloring-row img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    object-fit: cover;
+}
+
+/* Мобильная версия */
+@media (max-width: 900px) {
+  .coloring-row {
+      flex-direction: column;
+  }
+}
+
+
+
+/* Бокс со ШАГАМИ: лёгкий, аккуратный */
+.steps-box {
+    background: #f5f6fa;
+    border-left: 4px solid #4a6cf7;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-top: 18px;
+}
+
+.steps-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Перечень шагов */
+.custom-steps {
+    margin-left: 18px;
+}
+
+.custom-steps li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.custom-steps em {
+    color: #444;
+    font-style: italic;
+}
+
+
+/* Две визуальные колонки с картинками и промпт-картами */
+.visual-grid {
+    align-items: flex-start;
+}
+
+.visual-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Картинки города и игрушки */
+.visual-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    object-fit: cover;
+}
+
+/* Кнопки под промпт-картой */
+.visual-buttons {
+    margin-top: 16px;
+}
+
+.visual-buttons .btn-primary {
+    margin-top: 10px;
+}
+    
+@media (max-width: 900px) {
+    .visual-column {
+        width: 100%;
+    }
+}
+
+/* --------------------------- */
+/* MOBILE FIX PACK             */
+/* --------------------------- */
+
+/* 1. Уменьшаем шрифты больших блоков */
+@media (max-width: 600px) {
+
+    .workflow-text p,
+    .workflow-text li,
+    .workflow-text blockquote {
+        font-size: 15px !important;
+        line-height: 1.45;
+    }
+
+    .workflow-text h2 {
+        font-size: 20px !important;
+        margin-bottom: 15px;
+    }
+
+    .prompt-card h3 {
+        font-size: 18px !important;
+    }
+
+    .prompt-card p {
+        font-size: 14px !important;
+    }
+
+    .prompt-text {
+        font-size: 13px !important;
+        padding: 10px !important;
+    }
+}
+
+/* 2. Вязаный город / Ёлочная игрушка — вертикальные отступы */
+@media (max-width: 900px) {
+    .visual-column {
+        margin-bottom: 25px;
+    }
+    .visual-grid {
+        gap: 20px !important;
+    }
+}
+
+/* 3. Уменьшаем padding секций */
+@media (max-width: 600px) {
+    .workflow-section,
+    .presentation-section {
+        padding: 25px 12px !important;
+    }
+}
+
+/* 4. HERO-блок — более аккуратная адаптация */
+@media (max-width: 600px) {
+    .hero-photo {
+        max-width: 80%;
+        margin: auto;
+    }
+    .hero-title {
+        font-size: 28px !important;
+    }
+    .hero-subtitle {
+        font-size: 18px !important;
+    }
+}
+
+/* 5. Карточки промптов адаптивнее */
+@media (max-width: 600px) {
+    .prompt-card {
+        padding: 15px !important;
+        border-radius: 12px;
+    }
+    .copy-btn {
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* 6. Галерея игры — убираем дыры после скрытия изображений */
+@media (max-width: 900px) {
+    .game-row1 {
+        margin: 0;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+/* 7. Секция с раскрасками — компактнее */
+@media (max-width: 900px) {
+    .coloring-row img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 8. Кнопки визуальных блоков — компактнее */
+@media (max-width: 600px) {
+    .visual-buttons .btn-primary {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+}
+/* ------------------------------------------------ */
+/* 📌 1. Разрешаем красивый перенос длинных заголовков */
+/* ------------------------------------------------ */
+
+
+/* ------------------------------------------------ */
+/* 📌 2. Уменьшаем слишком большие заголовки на мобиле */
+/* ------------------------------------------------ */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px !important;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 22px !important;
+        line-height: 1.25;
+    }
+}
+
+/* ------------------------------------------------ */
+/* 📌 3. Убираем огромные "пустые поля" между секциями */
+/* ------------------------------------------------ */
+@media (max-width: 600px) {
+    .section,
+    .workflow-section,
+    .presentation-section {
+        padding-top: 20px !important;
+        padding-bottom: 25px !important;
+    }
+}
+
+/* ------------------------------------------------ */
+/* 📌 4. Исправляем блоки, где текст уезжает вправо */
+/* ------------------------------------------------ */
+@media (max-width: 600px) {
+    .workflow-text {
+        text-align: left !important;
+    }
+}
+
+/* ------------------------------------------------ */
+/* 📌 5. Уменьшаем межстрочный интервал для длинного текста */
+/* ------------------------------------------------ */
+@media (max-width: 600px) {
+    p {
+        line-height: 1.35 !important;
+        font-size: 15px !important;
+    }
+}
+@media (max-width: 600px) {
+    #an .title-block2 h1 {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    #an .title-block2 p {
+        font-size: 16px !important;
+        text-align: center;
+    }
+
+    #an .workflow-text {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .fade-in.visible {
+        animation-duration: 0.9s;
+    }
+}
